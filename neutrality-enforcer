@@ -1,0 +1,24 @@
+<?php 
+
+$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']); 
+
+if(strpos($hostname, "comcast")){
+<section>
+  <h1>Your ISP is not Net-Neutral!</h1>
+  <p>Unfortunately, your Internet Service Provider is attempting to break the web. It is violating one of the
+  core tenants of a free and open web by not treating data on the internet equally. This principle is called
+  <a href="http://en.wikipedia.org/wiki/Net_neutrality">Net Neutrality</a>. Violating net neutrality threatens
+  the entire web. Since your ISP has chosen not to be net-neutral, we are blocking access to this site when 
+  requested through your current ISP.</p>
+  
+  <p>To access this website, please switch to a net-neutral ISP.</p>
+</section>
+
+} else {
+
+// Content you wish to block access to. You can either put your entire website here to completely block 
+// all access to the net, or you can provide a "degraded" experience by simply blocking all CSS include
+// files, so that content is still delivered, but styling is only provided to net-neutral ISPs.
+
+}
+?>
